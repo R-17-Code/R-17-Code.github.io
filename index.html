@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Главная</title>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <nav class="navigation">
+                <div class="navigation-links">
+                    <span class="navigation-logo">ag-chukotka</span>
+                    <ul class="navigation-list">
+                        <li class="navigation-item"><a href="#" class="navigation-link">Туры</a></li>
+                        <li class="navigation-item"><a href="#" class="navigation-link">Индивидуальные туры</a></li>
+                        <li class="navigation-item"><a href="#" class="navigation-link">О нас</a></li>
+                        <li class="navigation-item"><a href="#" class="navigation-link">Блог</a></li>
+                        <li class="navigation-item"><a href="#" class="navigation-link">Контакты</a></li>
+                    </ul>
+                    <select id="lang" name="lang" class="lang-select">
+                        <option value="RU">RU</option>
+                        <option value="ENG">ENG</option>
+                    </select>
+                </div>
+
+                <div class="social-navigation">
+                    <div class="icon-block">
+                        <svg width="20" height="20" class="social-icon">
+                            <path id="Vector" d="M13.61 0L7.22 0C1.38 0 0 1.38 0 7.21L0 13.6C0 19.44 1.37 20.83 7.21 20.83L13.6 20.83C19.44 20.83 20.83 19.45 20.83 13.61L20.83 7.22C20.83 1.38 19.45 0 13.61 0ZM16.81 14.86L15.29 14.86C14.72 14.86 14.55 14.39 13.51 13.36C12.61 12.5 12.23 12.39 12.01 12.39C11.69 12.39 11.61 12.47 11.61 12.91L11.61 14.27C11.61 14.64 11.49 14.86 10.52 14.86C9.58 14.8 8.67 14.51 7.87 14.03C7.06 13.55 6.38 12.88 5.89 12.08C4.71 10.61 3.89 8.89 3.49 7.05C3.49 6.82 3.58 6.61 4.01 6.61L5.53 6.61C5.92 6.61 6.06 6.79 6.21 7.19C6.95 9.36 8.21 11.25 8.72 11.25C8.91 11.25 9 11.16 9 10.67L9 8.44C8.94 7.42 8.39 7.33 8.39 6.96C8.4 6.86 8.45 6.77 8.52 6.71C8.59 6.64 8.69 6.61 8.78 6.61L11.17 6.61C11.5 6.61 11.61 6.78 11.61 7.17L11.61 10.18C11.61 10.51 11.75 10.62 11.84 10.62C12.04 10.62 12.19 10.51 12.55 10.15C13.32 9.21 13.95 8.17 14.42 7.05C14.46 6.91 14.55 6.8 14.67 6.72C14.79 6.64 14.93 6.6 15.08 6.61L16.6 6.61C17.05 6.61 17.15 6.84 17.05 7.17C16.5 8.4 15.82 9.58 15.01 10.67C14.85 10.92 14.78 11.05 15.01 11.35C15.16 11.57 15.7 12.02 16.05 12.44C16.58 12.96 17.01 13.56 17.33 14.22C17.46 14.64 17.25 14.86 16.81 14.86Z" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </svg>
+                    </div>
+                    <div class="icon-block">
+                        <svg width="20" height="20" class="social-icon">
+                            <path id="Vector" d="M10.41 0C4.66 0 0 4.66 0 10.41C0 16.16 4.66 20.83 10.41 20.83C16.16 20.83 20.83 16.16 20.83 10.41C20.83 4.66 16.16 0 10.41 0ZM15.25 7.08C15.09 8.72 14.41 12.72 14.07 14.57C13.92 15.35 13.63 15.61 13.36 15.64C12.76 15.69 12.3 15.25 11.71 14.86C10.8 14.26 10.28 13.88 9.39 13.3C8.36 12.62 9.03 12.25 9.62 11.64C9.78 11.48 12.44 9.06 12.5 8.84C12.5 8.81 12.5 8.77 12.49 8.74C12.48 8.71 12.47 8.68 12.44 8.65C12.38 8.6 12.3 8.62 12.22 8.63C12.13 8.65 10.67 9.62 7.83 11.54C7.41 11.82 7.04 11.96 6.7 11.95C6.33 11.94 5.62 11.75 5.09 11.57C4.43 11.36 3.92 11.25 3.96 10.88C3.98 10.69 4.25 10.51 4.73 10.31C7.78 8.98 9.8 8.11 10.81 7.69C13.7 6.48 14.3 6.28 14.69 6.28C14.78 6.28 14.97 6.3 15.1 6.4C15.2 6.48 15.23 6.6 15.25 6.68C15.23 6.75 15.26 6.93 15.25 7.08Z" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </svg>
+                    </div>
+                    <div class="icon-block">
+                        <svg width="20" height="20" class="social-icon">
+                            <path id="Vector" d="M19.55 9.55C19.56 9.55 19.56 9.55 19.56 9.55C19.68 9.55 19.8 9.5 19.88 9.41C19.96 9.32 20 9.2 19.99 9.08C19.56 4.25 15.74 0.44 10.92 0C10.79 -0.01 10.67 0.03 10.58 0.11C10.49 0.19 10.44 0.31 10.44 0.44C10.52 6.84 11.36 9.46 19.55 9.55ZM19.55 10.44C11.36 10.53 10.52 13.15 10.44 19.55C10.44 19.68 10.49 19.79 10.58 19.88C10.66 19.95 10.77 20 10.88 20C10.89 20 10.9 19.99 10.92 19.99C15.74 19.55 19.56 15.74 19.99 10.91C20 10.79 19.96 10.67 19.88 10.58C19.79 10.49 19.68 10.44 19.55 10.44ZM9.04 0C4.24 0.45 0.43 4.27 0 9.08C-0.01 9.2 0.03 9.32 0.11 9.41C0.19 9.5 0.31 9.55 0.43 9.55C0.43 9.55 0.44 9.55 0.44 9.55C8.6 9.46 9.45 6.84 9.52 0.44C9.52 0.31 9.47 0.2 9.38 0.11C9.29 0.03 9.17 -0.01 9.04 0ZM0.44 10.44C0.3 10.42 0.19 10.49 0.11 10.58C0.03 10.67 -0.01 10.79 0 10.91C0.43 15.72 4.24 19.54 9.04 19.99C9.06 19.99 9.07 19.99 9.09 19.99C9.19 19.99 9.3 19.95 9.38 19.88C9.47 19.79 9.52 19.67 9.52 19.55C9.45 13.15 8.6 10.53 0.44 10.44Z"  fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </svg>
+                    </div>
+                </div>
+            </nav>
+
+            <h1 class="header-title">Индивидуальные и групповые туры на <span class="header-title-span">Чукотку</span></h1>
+            <div class="header-icons">
+                <div class="icon">
+                    <div class="svg-bg">
+                        <svg width="30" height="25">
+                            <path id="Vector" d="M18.16 25.66L18.16 20.86L21.16 20.86L21.16 25.66L18.16 25.66ZM9.16 25.66L9.16 19.72L0 19.72L5.94 10.8L3.05 10.8L10.66 0L18.28 10.8L15.39 10.8L21.34 19.72L12.16 19.72L12.16 25.66L9.16 25.66ZM22.72 19.72L17.53 11.94L20.5 11.94L15.87 5.4L19.66 0L27.27 10.8L24.38 10.8L30.33 19.72L22.72 19.72Z" />
+                        </svg>
+                    </div>
+                    <p>Национальные села</p>
+                </div>
+                <div class="icon">
+                    <div class="svg-bg">
+                        <svg width="35" height="18">
+                            <path id="Vector" d="M20.68 0L14.71 7.89L19.25 13.9L16.7 15.79C14.01 12.24 9.54 6.31 9.54 6.31L0 18.95L35 18.95L20.68 0Z"/>
+                        </svg>
+                    </div>
+                    <p>Национальный парк Берегия</p>
+                </div>
+                <div class="icon">
+                    <div class="svg-bg">
+                        <svg width="27.714111" height="29.998779">
+                            <path id="Vector" d="M13.67 13.63C12.91 19.81 8.99 20.9 8.99 25.2C8.99 27.84 11.22 29.99 13.85 29.99C16.49 29.99 18.71 27.84 18.71 25.2C18.71 20.9 14.79 19.81 14.03 13.63C14 13.45 13.7 13.45 13.67 13.63ZM4.68 0.13C3.91 6.31 0 7.4 0 11.7C0 14.34 2.22 16.49 4.85 16.49C7.49 16.49 9.71 14.34 9.71 11.7C9.71 7.4 5.79 6.31 5.03 0.13C5.01 -0.05 4.7 -0.05 4.68 0.13ZM22.68 0.13C21.91 6.31 18 7.4 18 11.7C18 14.34 20.22 16.49 22.85 16.49C25.49 16.49 27.71 14.34 27.71 11.7C27.71 7.4 23.79 6.31 23.03 0.13C23 -0.05 22.7 -0.05 22.68 0.13Z"/>
+                        </svg>
+                    </div>
+                    <p>Мыс Дежнева</p>
+                </div>
+            </div>
+        </header>
+
+    
+        <main class="main">
+            <div class="cards-container">
+                <div class="card-1 card">
+                    <div class="date-line"><p class="date">30.06</p> <p class="more-dates">+ 3 даты</p></div>
+                    <button class="price"> от 145 000 &#8381</button>
+                    <p class="card-text">Киты и моржки национального парка Берингия</p>
+                    <div class="card-svg-link">
+                        <svg width="20" height="18" class="top-right-arrow">
+                            <path id="Arrow 8" d="M15.84 1.86L11.67 1.49C11.25 1.46 10.95 1.1 10.99 0.68C11.03 0.26 11.38 -0.04 11.8 0L17.78 0.52C18.2 0.56 18.5 0.92 18.46 1.33L17.94 7.31C17.9 7.73 17.54 8.03 17.12 7.99C16.71 7.96 16.41 7.6 16.44 7.18L16.81 3.01L0.96 16.31L0 15.16L15.84 1.86Z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-2 card">
+                    <div class="date-line"><p class="date">30.06</p> <p class="more-dates">+ 3 даты</p></div>
+                    <button class="price"> от 145 000 &#8381</button>
+                    <p class="card-text">Большая зименяя экспедиция на Чукотку</p>
+                    <div class="card-svg-link">
+                        <svg width="20" height="18" class="top-right-arrow">
+                            <path id="Arrow 8" d="M15.84 1.86L11.67 1.49C11.25 1.46 10.95 1.1 10.99 0.68C11.03 0.26 11.38 -0.04 11.8 0L17.78 0.52C18.2 0.56 18.5 0.92 18.46 1.33L17.94 7.31C17.9 7.73 17.54 8.03 17.12 7.99C16.71 7.96 16.41 7.6 16.44 7.18L16.81 3.01L0.96 16.31L0 15.16L15.84 1.86Z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-3 card">
+                    <div class="date-line"><p class="date">30.06</p> <p class="more-dates">+ 3 даты</p></div>
+                    <button class="price"> от 145 000 &#8381</button>
+                    <p class="card-text">Большая зименяя экспедиция на Чукотку</p>
+                    <div class="card-svg-link">
+                        <svg width="20" height="18" class="top-right-arrow">
+                            <path id="Arrow 8" d="M15.84 1.86L11.67 1.49C11.25 1.46 10.95 1.1 10.99 0.68C11.03 0.26 11.38 -0.04 11.8 0L17.78 0.52C18.2 0.56 18.5 0.92 18.46 1.33L17.94 7.31C17.9 7.73 17.54 8.03 17.12 7.99C16.71 7.96 16.41 7.6 16.44 7.18L16.81 3.01L0.96 16.31L0 15.16L15.84 1.86Z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-4 card">
+                    <div class="date-line"><p class="date">30.06</p> <p class="more-dates">+ 3 даты</p></div>
+                    <button class="price"> от 145 000 &#8381</button>
+                    <p class="card-text">Большая зименяя экспедиция на Чукотку</p>
+                    <div class="card-svg-link">
+                        <svg width="20" height="18" class="top-right-arrow">
+                            <path id="Arrow 8" d="M15.84 1.86L11.67 1.49C11.25 1.46 10.95 1.1 10.99 0.68C11.03 0.26 11.38 -0.04 11.8 0L17.78 0.52C18.2 0.56 18.5 0.92 18.46 1.33L17.94 7.31C17.9 7.73 17.54 8.03 17.12 7.99C16.71 7.96 16.41 7.6 16.44 7.18L16.81 3.01L0.96 16.31L0 15.16L15.84 1.86Z"/>
+                        </svg>
+                    </div>
+                </div>
+               
+                <div class="card-double card">
+                    <div class="date-line"><p class="date">30.06</p> <p class="more-dates">+ 3 даты</p></div>
+                    <button class="price"> от 145 000 &#8381</button>
+                    <p class="card-text">Путешествие по краю земли: мыс Дежнева <br> и киты Берингова моря</p>
+                    <div class="card-svg-link">
+                        <svg width="20" height="18" class="top-right-arrow">
+                            <path id="Arrow 8" d="M15.84 1.86L11.67 1.49C11.25 1.46 10.95 1.1 10.99 0.68C11.03 0.26 11.38 -0.04 11.8 0L17.78 0.52C18.2 0.56 18.5 0.92 18.46 1.33L17.94 7.31C17.9 7.73 17.54 8.03 17.12 7.99C16.71 7.96 16.41 7.6 16.44 7.18L16.81 3.01L0.96 16.31L0 15.16L15.84 1.86Z"/>
+                        </svg>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="advert-block">
+                <div class="advert-text">
+                    <h2 class="adv-title">Оргинизуем инидвидуальный тур на <span class="adv-title-span">Чукотку</span></h2>
+                    <p class="adv-description">Открыть для себя этот удивительный край, где сливаются ледяные просторы и горячее сердце природы, теперь возможно. </p>
+                    <div class="button-block">
+                        <a href="#" class="link-1 button-link">Подробнее</a>
+                        <a href="" class="link-2 button-link">Заявка на корпоративный тур</a>
+                    </div>
+                </div>
+                <div class="advert-image">
+                    <img src="./img/people-v2.png" alt="couple">
+                </div>
+            </div>
+
+
+            <section class="about">
+                <div class="about-info">
+                    <div class="about-text">
+                        <h2 class="about-title">О компании</h2>
+                        <p class="about-description">Мы специализируемся на создании незабываемых путешествий, погружающих в волшебный мир дикой природы, удивительных традиций коренных народов и захватывающих экспедиций. </p>
+                        <p class="about-description">Мы гордимся тем, что предлагаем экологически чистые туры, способствующие сохранению уникальной природы Чукотки и поддержке местных сообществ. </p>
+                        <div class="button-block">
+                            <a href="#" class="link-1 button-link">Подробнее</a>
+                            <a href="" class="link-2 button-link">Заявка на корпоративный тур</a>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="./img/sunset.png" alt="couple" class="about-image-main">
+                        <img src="./img/snow.png" alt="couple" class="about-image-small">
+                    </div>
+                </div>
+                <div class="logo-row">
+                    <div class="logo-wrapper">
+                        <svg width="70.000000" height="70.000000" >
+                            <path id="Subtract" d="M4.92041 4.9206C0 9.84121 0 17.7608 0 33.6L0 36.4C0 52.2392 0 60.1588 4.92041 65.0794C9.84131 70 17.7607 70 33.6001 70L36.3999 70C52.2393 70 60.1587 70 65.0796 65.0794C70 60.1588 70 52.2392 70 36.4L70 33.6C70 17.7608 70 9.84121 65.0796 4.9206C60.1587 0 52.2393 0 36.3999 0L33.6001 0C17.7607 0 9.84131 0 4.92041 4.9206ZM11.8125 21.2918C12.1919 39.4918 21.292 50.4293 37.2461 50.4293L38.1504 50.4293L38.1504 40.0168C44.0127 40.6001 48.4458 44.8876 50.2251 50.4293L58.5088 50.4293C56.2334 42.146 50.2539 37.5668 46.521 35.8168C50.2539 33.6584 55.5039 28.4085 56.7583 21.2918L49.2329 21.2918C47.5996 27.0668 42.7588 32.3168 38.1504 32.8126L38.1504 21.2918L30.625 21.2918L30.625 41.4751C25.9585 40.3084 20.0669 34.6501 19.8042 21.2918L11.8125 21.2918Z" clip-rule="evenodd" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <div class="logo-wrapper">
+                        <svg width="145.000000" height="78.000000" viewBox="0 0 145 78" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <defs>
+                                <pattern id="pattern_217_2540" patternContentUnits="objectBoundingBox" width="1.000000" height="1.000000">
+                                    <use xlink:href="#image217_254_0" transform="matrix(0.000983,0,0,0.001828,-0.089561,0)"/>
+                                </pattern>
+                                <image id="image217_254_0" width="1199.000000" height="547.000000" xlink:href="data:image/png;base64,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"/>
+                            </defs>
+                            <rect id="image 19" width="145.000000" height="78.000000"fill="url(#pattern_217_2540)" fill-opacity="1.000000"/>
+                        </svg>
+                    </div>
+                    <div class="logo-wrapper">
+                        <img src="./img/svg/rjd-logo.svg" alt="">
+                    </div>
+                    <div class="logo-wrapper">
+                        <img src="./img/svg/s7-logo.svg" alt="">
+                    </div>
+                    <div class="logo-wrapper">
+                        <img src="./img/svg/aviasales-logo.svg" alt="">
+                    </div>
+                    <div class="additional-info">
+                        <div class="additional-warpper">
+                            <h2 class="additional-title">Уединение с природой</h2>
+                            <div class="add-text-row">
+                                <p class="additional-text">Чукотка - это место, где вы сможете насладиться тишиной и покоем природы. Отсутствие массового туризма делает это место идеальным для тех, кто ищет уединения и спокойствия.</p>
+                                <p class="additional-text">Мы гордимся тем, что предлагаем экологически чистые туры, способствующие сохранению уникальной природы Чукотки и поддержке местных сообществ. Каждый наш тур разработан с учетом принципов устойчивого туризма. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </section>
+
+            
+            <section class="blog">
+                <h2 class="blog-title">БЛОГ</h2>
+                <div class="blog-grid-wrapper">
+                    <div class="blog-double-card blog-card">
+                        <div class="blog-key_words">
+                            <p class="key_word">Экскурсии</p>
+                            <p class="key_word">Природа</p>
+                        </div>
+                        <div class="blog-card_info">
+                            <div class="icon-row">
+                                <p class="blog-date">01.06.2024</p>
+                                <p class="views">34</p>
+                                <p class="person">Александр Пономарев</p>
+                            </div>
+                            <h3 class="blog-card-title">Ранний завтрак, погрузка в транспорт и переезд до аэропорта поселка Провидения.</h3>
+                        </div>
+                    </div>
+                    <div class="blog-small-card sm-1">
+                        <div class="small-card-top">
+                            <div class="blog-key_words">
+                                <p class="key_word">Исследования</p>
+                                <p class="key_word">История</p>
+                            </div>
+                            <div class="icon-row">
+                                <p class="blog-date">01.06.2024</p>
+                                <p class="views">34</p>
+                            </div>
+                        </div>
+                        <div class="small-card-bottom">
+                            <p class="person">Александр Пономарев</p>
+                            <h3>Вылет в анадырь</h3>
+                            <p>Мы гордимся тем, что предлагаем экологически чистые туры, способствующие сохранению уникальной природы Чукотки и поддержке местных сообществ. </p>
+                        </div>
+                    </div>
+                    <div class="blog-small-card sm-2">
+                        <div class="small-card-top">
+                            <div class="blog-key_words">
+                                <p class="key_word">Культура</p>
+                            </div>
+                            <div class="icon-row">
+                                <p class="blog-date">01.06.2024</p>
+                                <p class="views">34</p>
+                            </div>
+                        </div>
+                        <div class="small-card-bottom">
+                            <p class="person">Александр Пономарев</p>
+                            <h3>Вылет в анадырь</h3>
+                            <p>Мы гордимся тем, что предлагаем экологически чистые туры, способствующие сохранению уникальной природы Чукотки и поддержке местных сообществ. </p>
+                        </div>
+                    </div>
+                    <div class="blog-small-card sm-3">
+                        <div class="small-card-top">
+                            <div class="blog-key_words">
+                                <p class="key_word">Экскурсии</p>
+                                <p class="key_word">Природа</p>
+                            </div>
+                            <div class="icon-row">
+                                <p class="blog-date">01.06.2024</p>
+                                <p class="views">34</p>
+                            </div>
+                        </div>
+                        <div class="small-card-bottom">
+                            <p class="person">Александр Пономарев</p>
+                            <h3>Вылет в анадырь</h3>
+                            <p>Мы гордимся тем, что предлагаем экологически чистые туры, способствующие сохранению уникальной природы Чукотки и поддержке местных сообществ. </p>
+                        </div>
+                    </div>
+                    <div class="blog-small-card sm-4">
+                        <div class="small-card-top">
+                            <div class="blog-key_words">
+                                <p class="key_word">Природа</p>
+                                
+                            </div>
+                            <div class="icon-row">
+                                <p class="blog-date">01.06.2024</p>
+                                <p class="views">34</p>
+                            </div>
+                        </div>
+                        <div class="small-card-bottom">
+                            <p class="person">Александр Пономарев</p>
+                            <h3>Вылет в анадырь</h3>
+                            <p>Мы гордимся тем, что предлагаем экологически чистые туры, способствующие сохранению уникальной природы Чукотки и поддержке местных сообществ. </p>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="blog-more">
+                    <a href="#" class="more-link">Смотреть больше статей</a>
+                </div>
+            </section>
+
+            <section class="no-time">
+                <div class="no-time-wrapper">
+                    <h3 class="no-time-title">Нет времени на поиск?</h3>
+                    <p>Мы поможем подобрать тур по вашим предпочтениям</p>
+                    <form action="/submit" method="post" class="no-time-form">
+                            <input type="text" id="name" name="name" placeholder="ФИО" required>
+                            <input type="tel" id="tel" name="number"placeholder="Номер телеофна" required>
+
+                            <label class="custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox__input" required>
+                                <span class="custom-checkbox__checkmark"></span>
+                                Я даю согласие на обработку моих персональных данных и соглашаюсь с политикой конфиденциальности
+                            </label>
+                        <div>
+                            <button type="submit" class="no-time-form-btn">Оставить нам заявку</button>
+                        </div>
+                    </form>
+                </div>
+                <img src="./img/animals-v2.png" alt="animals" class="animal-img">
+            </section>
+        </main>
+        <footer class="footer">
+           <div class="footer-grid-wrapper">
+                <div class="logos">
+                    <span class="navigation-logo footer-logo">ag-chukotka</span>
+                    <div class="pay-logos">
+                        <img src="./img/svg/mir-logo.svg" alt="mir">
+                        <img src="./img/svg/visa-logo.svg" alt="vis">
+                        <img src="./img/svg/master-card-logo.svg" alt="mastercard">
+                    </div>
+                    <img src="./img/svg/federal-agency-logo.svg" alt="federal logo">
+                </div>
+                <div class="address">
+                    <p class="block-title">Адрес юридический:</p>
+                    <p class="block-info">689251, Чукотский автономный округ, Г.О. ПРОВИДЕНСКИЙ, ПГТ ПРОВИДЕНИЯ, УЛ ПОЛЯРНАЯ, 
+                        Д. 1, ПОМЕЩ. 51</p>
+                </div>
+                <div class="time">
+                    <p class="block-title">Время работы:</p>
+                    <p class="block-info">Пн-Пт: 09:00 — 20:00
+                        Сб: 10:00 — 19:00</p>
+                </div>
+                <div class="contacts">
+                    <div class="email-address">
+                        <p class="block-title">Email:</p>
+                        <p class="block-info">tishckoff.a@yandex.ru</p>
+                    </div>
+                    <div class="phone-number">
+                        <p class="block-title">Телефон:</p>
+                        <p class="block-info">+7(968) 858 00 93</p>
+                    </div>
+                </div>
+                <div class="footer-icons">
+                    <div class="social-navigation">
+                        <div class="icon-block">
+                            <svg width="20" height="20" class="social-icon">
+                                <path id="Vector" d="M13.61 0L7.22 0C1.38 0 0 1.38 0 7.21L0 13.6C0 19.44 1.37 20.83 7.21 20.83L13.6 20.83C19.44 20.83 20.83 19.45 20.83 13.61L20.83 7.22C20.83 1.38 19.45 0 13.61 0ZM16.81 14.86L15.29 14.86C14.72 14.86 14.55 14.39 13.51 13.36C12.61 12.5 12.23 12.39 12.01 12.39C11.69 12.39 11.61 12.47 11.61 12.91L11.61 14.27C11.61 14.64 11.49 14.86 10.52 14.86C9.58 14.8 8.67 14.51 7.87 14.03C7.06 13.55 6.38 12.88 5.89 12.08C4.71 10.61 3.89 8.89 3.49 7.05C3.49 6.82 3.58 6.61 4.01 6.61L5.53 6.61C5.92 6.61 6.06 6.79 6.21 7.19C6.95 9.36 8.21 11.25 8.72 11.25C8.91 11.25 9 11.16 9 10.67L9 8.44C8.94 7.42 8.39 7.33 8.39 6.96C8.4 6.86 8.45 6.77 8.52 6.71C8.59 6.64 8.69 6.61 8.78 6.61L11.17 6.61C11.5 6.61 11.61 6.78 11.61 7.17L11.61 10.18C11.61 10.51 11.75 10.62 11.84 10.62C12.04 10.62 12.19 10.51 12.55 10.15C13.32 9.21 13.95 8.17 14.42 7.05C14.46 6.91 14.55 6.8 14.67 6.72C14.79 6.64 14.93 6.6 15.08 6.61L16.6 6.61C17.05 6.61 17.15 6.84 17.05 7.17C16.5 8.4 15.82 9.58 15.01 10.67C14.85 10.92 14.78 11.05 15.01 11.35C15.16 11.57 15.7 12.02 16.05 12.44C16.58 12.96 17.01 13.56 17.33 14.22C17.46 14.64 17.25 14.86 16.81 14.86Z" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </svg>
+                        </div>
+                        <div class="icon-block">
+                            <svg width="20" height="20" class="social-icon">
+                                <path id="Vector" d="M10.41 0C4.66 0 0 4.66 0 10.41C0 16.16 4.66 20.83 10.41 20.83C16.16 20.83 20.83 16.16 20.83 10.41C20.83 4.66 16.16 0 10.41 0ZM15.25 7.08C15.09 8.72 14.41 12.72 14.07 14.57C13.92 15.35 13.63 15.61 13.36 15.64C12.76 15.69 12.3 15.25 11.71 14.86C10.8 14.26 10.28 13.88 9.39 13.3C8.36 12.62 9.03 12.25 9.62 11.64C9.78 11.48 12.44 9.06 12.5 8.84C12.5 8.81 12.5 8.77 12.49 8.74C12.48 8.71 12.47 8.68 12.44 8.65C12.38 8.6 12.3 8.62 12.22 8.63C12.13 8.65 10.67 9.62 7.83 11.54C7.41 11.82 7.04 11.96 6.7 11.95C6.33 11.94 5.62 11.75 5.09 11.57C4.43 11.36 3.92 11.25 3.96 10.88C3.98 10.69 4.25 10.51 4.73 10.31C7.78 8.98 9.8 8.11 10.81 7.69C13.7 6.48 14.3 6.28 14.69 6.28C14.78 6.28 14.97 6.3 15.1 6.4C15.2 6.48 15.23 6.6 15.25 6.68C15.23 6.75 15.26 6.93 15.25 7.08Z" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </svg>
+                        </div>
+                        <div class="icon-block">
+                            <svg width="20" height="20" class="social-icon">
+                                <path id="Vector" d="M19.55 9.55C19.56 9.55 19.56 9.55 19.56 9.55C19.68 9.55 19.8 9.5 19.88 9.41C19.96 9.32 20 9.2 19.99 9.08C19.56 4.25 15.74 0.44 10.92 0C10.79 -0.01 10.67 0.03 10.58 0.11C10.49 0.19 10.44 0.31 10.44 0.44C10.52 6.84 11.36 9.46 19.55 9.55ZM19.55 10.44C11.36 10.53 10.52 13.15 10.44 19.55C10.44 19.68 10.49 19.79 10.58 19.88C10.66 19.95 10.77 20 10.88 20C10.89 20 10.9 19.99 10.92 19.99C15.74 19.55 19.56 15.74 19.99 10.91C20 10.79 19.96 10.67 19.88 10.58C19.79 10.49 19.68 10.44 19.55 10.44ZM9.04 0C4.24 0.45 0.43 4.27 0 9.08C-0.01 9.2 0.03 9.32 0.11 9.41C0.19 9.5 0.31 9.55 0.43 9.55C0.43 9.55 0.44 9.55 0.44 9.55C8.6 9.46 9.45 6.84 9.52 0.44C9.52 0.31 9.47 0.2 9.38 0.11C9.29 0.03 9.17 -0.01 9.04 0ZM0.44 10.44C0.3 10.42 0.19 10.49 0.11 10.58C0.03 10.67 -0.01 10.79 0 10.91C0.43 15.72 4.24 19.54 9.04 19.99C9.06 19.99 9.07 19.99 9.09 19.99C9.19 19.99 9.3 19.95 9.38 19.88C9.47 19.79 9.52 19.67 9.52 19.55C9.45 13.15 8.6 10.53 0.44 10.44Z"  fill-opacity="1.000000" fill-rule="nonzero"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+           </div>
+            <div class="footer-policy">
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение об обработке</a>
+                </div>
+                <p class="copyright">©2024 Все права защищены</p>
+            </div>
+        </footer>
+    </div>
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
